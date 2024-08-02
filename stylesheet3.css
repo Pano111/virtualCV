@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('images/image3.jpg');
+    background-size: cover;
+}
+
+
+/*Code for the Header*/
+.centered-links {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*background-color: black;*/
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    background-color: transparent;  
+   /* background-color: #333*/
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.link.active {
+    text-decoration: underline;
+}
+
+
+.link:hover {
+    color: #45a049;
+}
+
+.fixed-links {
+    background: url('tiago-ferreira-_Xv52Y0r47k-unsplash.jpg') no-repeat center center / cover; /* Add this line for a background image */
+    background-color: #333; /* This line ensures there's a fallback background color */
+}
+
+/*For the textboxes*/
+.textboxes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px; /* Reduced gap between textboxes */
+    padding: 10px; /* Reduced padding */
+    width: 100%;
+    height: 60%;
+    max-width: 700px; /* Reduced max-width of the container */
+    margin: 0 auto;
+    position: relative;
+    top: 50px; /* Adjust positioning if needed */
+    background: rgba(107, 105, 105, 0.384); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 10px; /* Optional: Rounded corners */
+    overflow: hidden; /* Ensure pseudo-element is contained */
+}
+
+.textboxes-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%; /* Extend the width beyond the container */
+    height: 100%;
+    background: rgba(107, 105, 105, 0.384); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Ensure the pseudo-element is behind the container content */
+    transform: translateX(-10%); /* Shift to the left to increase right side */
+}
+
+.textboxes-container input::placeholder,
+.textboxes-container textarea::placeholder {
+    color: black; /* Change to the color you prefer */
+    font-size: 0.8em; /* Adjust font size if needed */
+    font-style: italic; /* Example of italicizing the placeholder text */
+}
+.textboxes-container input,
+.textboxes-container textarea {
+    width: 100%;
+    padding: 8px; /* Reduced padding inside textboxes */
+    font-size: 20px; /* Decreased font size */
+    border: 2px solid #ccc;
+    border-radius: 4px; /* Slightly smaller border-radius */
+}
+.textboxes-container textarea {
+    grid-column: span 2;
+    height: 120px; /* Reduced height of the textarea */
+    resize: vertical;
+    font-size: 25px;
+    
+}
+
+/*animation for the button*/
+@keyframes submit-button {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/*.bounce {
+    animation: bounce 2s infinite;
+}*/
+
+/*Submit button*/
+.submit-button {
+    grid-column: span 2;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: black;
+    size: 10px;
+    background-color: rgba(255, 255, 255, 0.479); /* Button color */
+    border: none;
+    animation: bounce 2s infinite;
+    border-radius: 25px; /* Rounded sides */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    margin-left: 170px;
+    max-width: 400px;
+}
+.submit-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    
+}
