@@ -295,6 +295,12 @@ body {
     background-color: #0056b3;
 }
 
+.confirmation-message {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+
 /*.section1_2 h6 {
     margin-top: 100px;
     text-align: left;
@@ -308,6 +314,15 @@ body {
     text-align: center;
     font-size: 75px;
     
+}
+
+/*for the "kopano" logo*/
+.top-right-image {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .button {
@@ -328,6 +343,11 @@ body {
 
 .linkedin-button {
     background-color: #0077B5;
+    color: white;
+}
+
+.github-button {
+    background-color: #6c03b3ef;
     color: white;
 }
 

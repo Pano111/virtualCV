@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="centered-links">
-        <a href="website Porfolio2.html" class="link" id="home-link">Home</a>
+        <a href="index.html" class="link" id="home-link">Home</a>
         <!--<a href="resumePage.html" class="link">Resume</a>-->
         <a href="contactMe.html" class="link" id="contact-link">Contact Me</a>
     </div>>
@@ -16,13 +16,19 @@
     
 
     <div class="textboxes-container">
-        <input type="text" id="name" placeholder="Enter your name">
-        <input type="email" id="email" placeholder="Enter your email">
-        <input type="tel" id="phone" placeholder="Enter your phone number">
-        <input type="text" id="additional" placeholder="Enter additional info">
-        <textarea id="message" placeholder="Enter your message"></textarea>
-        <button class="submit-button" onclick="sendEmail()">Submit</button>
+
+        <form action="https://formspree.io/f/xpwadykv" method="POST">
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <input type="text" id="additional"name="text"  placeholder="Enter additional info">
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            <button type="submit" class="submit-button" onclick="sendEmail()">Submit</button>
+        </form>
+        
     </div>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script src="script.js"></script>
 
